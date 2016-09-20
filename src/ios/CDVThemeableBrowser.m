@@ -878,7 +878,18 @@
         self.titleLabel.numberOfLines = 1;
         self.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
         self.titleLabel.textColor = [CDVThemeableBrowserViewController colorFromRGBA:[self getStringFromDict:_browserOptions.title withKey:kThemeableBrowserPropColor withDefault:@"#000000ff"]];
-	self.titleLabel.font = [UIFont boldSystemFontOfSize:16];
+    	//self.titleLabel.font = [UIFont boldSystemFontOfSize:16];
+        self.titleLabel.font = [UIFont fontWithName:@"Futura-Bold" size:14];
+
+        // List for fonts
+//        for (NSString* family in [UIFont familyNames])
+//        {
+//            NSLog(@"%@", family);
+//            for (NSString* name in [UIFont fontNamesForFamilyName: family])
+//            {
+//                NSLog(@"  %@", name);
+//            }
+//        }
 
         if (_browserOptions.title[kThemeableBrowserPropStaticText]) {
             self.titleLabel.text = _browserOptions.title[kThemeableBrowserPropStaticText];
