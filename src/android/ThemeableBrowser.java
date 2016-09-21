@@ -79,8 +79,6 @@ import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import static android.content.Context.*;
-
 @SuppressLint("SetJavaScriptEnabled")
 public class ThemeableBrowser extends CordovaPlugin {
 
@@ -744,7 +742,7 @@ public class ThemeableBrowser extends CordovaPlugin {
                     title.setEllipsize(TextUtils.TruncateAt.END);
                     title.setGravity(Gravity.CENTER);
                     //title.setTypeface(title.getTypeface(), Typeface.BOLD);
-                    Typeface tf = Typeface.createFromAsset(Context.getAssets(), "fonts/Futura-Bold.ttf");
+                    Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Futura-Bold.ttf");
         		    title.setTypeface(tf);
                     title.setTextColor(hexStringToColor(
                             features.title.color != null
