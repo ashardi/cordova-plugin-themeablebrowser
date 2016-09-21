@@ -741,7 +741,8 @@ public class ThemeableBrowser extends CordovaPlugin {
                     title.setSingleLine();
                     title.setEllipsize(TextUtils.TruncateAt.END);
                     title.setGravity(Gravity.CENTER);
-		    title.setTypeface(title.getTypeface(), Typeface.BOLD);
+                    //title.setTypeface(title.getTypeface(), Typeface.BOLD);
+        		    title.setTypeface(font.FUTURA, Typeface.BOLD);
                     title.setTextColor(hexStringToColor(
                             features.title.color != null
                                     ? features.title.color : "#000000ff"));
